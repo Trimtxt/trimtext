@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrimTxt | Privacy-First Text & Whitespace Sanitizer</title>
+    <meta name="description" content="TrimTxt is a lightning-fast, privacy-first text and whitespace sanitizer. Surgically clean code, spaces, and AI formatting artifacts 100% locally in your browser.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Trim[Txt]</h1>
+            <p class="tagline">The privacy-first text & whitespace optimizer.</p>
+            <div class="privacy-badge">🔒 100% Local Processing: Your data never leaves your computer.</div>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="setMode('dev')">👨‍💻 Dev Mode</button>
+            <button class="mode-btn" onclick="setMode('ai')">🤖 AI Sanitizer</button>
+            <button class="mode-btn" onclick="setMode('bulk')">📊 Bulk Strip</button>
+        </div>
+
+        <div class="workspace">
+            <div class="panel">
+                <label>Input Messy Text:</label>
+                <textarea id="input-text" placeholder="Paste your raw text, logs, code, or AI outputs here..." oninput="updateStats()"></textarea>
+                <div id="char-stats" class="stats">Characters: 0 | Lines: 0</div>
+            </div>
+
+            <div class="panel">
+                <label>Cleaned Output:</label>
+                <textarea id="output-text" readonly placeholder="Your optimized text will appear here..."></textarea>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-clear" onclick="clearAll()">Clear</button>
+                    <button id="copy-btn" class="btn btn-copy" onclick="copyToClipboard()">Copy to Clipboard</button>
+                    <button class="btn btn-primary" onclick="processText()">Optimize Text</button>
+                </div>
+            </div>
+        </div>
+
+                <footer>
+            <p>Made for developers, writers, and data heroes. 🔒 Zero tracking server scripts.</p>
+            <p style="margin-top: 18px;">
+                <a href="https://ko-fi.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform 0.2s ease;">
+                    <img src="https://ko-fi.com" alt="Support TrimTxt on Ko-fi" style="height: 38px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                </a>
+            </p>
+        </footer>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

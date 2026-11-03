@@ -188,3 +188,21 @@ footer a:hover {
     color: #f0abfc;
     text-decoration: underline;
 }
+.kofi-text-button {
+    display: inline-block;
+    background-color: #29abe2; /* Premium Ko-fi Blue */
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.kofi-text-button:hover {
+    background-color: #1f8bae; /* Sleek dark blue when hovered */
+    transform: translateY(-2px); /* Gentle tactile lift effect */
+    color: #ffffff !important;
+}
